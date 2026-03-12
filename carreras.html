@@ -1,0 +1,53 @@
+<html>
+<head>
+    <title>Carreras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="nav-menu">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="novedades.html">Novedades</a></li>
+        </ul>
+    </div>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="20">
+        <tr>
+            <td width="30%" bgcolor="#e0e0e0" valign="top">
+                <span style="font-weight: bold;">Filtros:</span><br><br>
+                Turno Mañana <input type="checkbox"><br>
+                Turno Noche <input type="checkbox">
+            </td>
+            <td width="70%" valign="top">
+                <h2>Oferta Académica</h2>
+                
+                <div class="acordeon-header" onclick="toggleAcordeon('panel1')" style="background:#ccc; padding:10px; cursor:pointer;">
+                    Ingeniería en Sistemas <span>+</span>
+                </div>
+                <div id="panel1" style="display:none; padding:10px; border:1px solid #ccc;">
+                    Duración: 5 años. Requiere curso de ingreso.
+                </div>
+
+                <div class="acordeon-header" onclick="toggleAcordeon('panel2')" style="background:#ccc; padding:10px; cursor:pointer; margin-top:5px;">
+                    Licenciatura en Diseño <span>+</span>
+                </div>
+                <div id="panel2" style="display:none; padding:10px; border:1px solid #ccc;">
+                    Duración: 4 años. Modalidad híbrida.
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        // ERROR: Lógica de acordeón que solo funciona con click del mouse
+        function toggleAcordeon(id) {
+            var x = document.getElementById(id);
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

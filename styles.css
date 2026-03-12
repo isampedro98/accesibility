@@ -1,0 +1,91 @@
+/* ESTILOS INACCESIBLES */
+* {
+  /* ¡Grave error! Elimina el indicador visual para navegación por teclado */
+  outline: none !important; 
+}
+
+body {
+  font-family: "Times New Roman", Times, serif; /* Tipografía poco amigable para dislexia */
+  font-size: 12px; /* Muy pequeño */
+  color: #999999; /* Contraste bajísimo contra fondo blanco */
+  background-color: #f4f4f4;
+  line-height: 1.1; /* Párrafos apretados, difícil lectura */
+}
+
+/* Menú horizontal inaccesible */
+.nav-menu {
+  background-color: #e0e0e0;
+  padding: 10px;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav-menu li {
+  margin-right: 20px;
+  position: relative;
+}
+
+.nav-menu a {
+  color: #a0a0a0; /* Contraste terrible */
+  text-decoration: none;
+}
+
+/* Submenú que solo funciona con HOVER de mouse, no con teclado */
+.submenu {
+  display: none;
+  position: absolute;
+  background: #fff;
+}
+
+.nav-menu li:hover .submenu {
+  display: block; 
+}
+
+/* Botones genéricos */
+.btn {
+  background-color: #4CAF50;
+  color: #4CAF50; /* Texto del mismo color que el fondo casi */
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Modal Inaccesible */
+#promoModal {
+  display: none;
+  position: fixed;
+  top: 30%;
+  left: 30%;
+  width: 400px;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  z-index: 1000;
+  /* Sin shadow DOM, ni backdrop que impida interactuar con el fondo */
+}
+
+/* Formulario Inaccesible */
+input[type="text"], input[type="password"] {
+  border: 1px solid #ccc;
+  padding: 5px;
+  color: #ccc; /* Texto introducido casi invisible */
+}
+
+.error-text {
+  color: red; /* Error indicado SOLO por color, malo para daltonismo */
+}
+
+.fake-checkbox {
+  width: 15px;
+  height: 15px;
+  background: #eee;
+  border: 1px solid #999;
+  display: inline-block;
+  /* No es enfocable, no tiene rol */
+}
+.fake-checkbox.checked {
+  background: blue; /* Solo color, sin tilde visible */
+}

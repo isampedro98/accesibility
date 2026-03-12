@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="nav-menu">
+        <ul>
+            <li><a href="index.html">Volver</a></li>
+        </ul>
+    </div>
+
+    <div style="padding: 30px;">
+        <h3>Ingreso al Sistema Siu-Guarani Universitario v9.8.2</h3>
+        
+        <form onsubmit="simularLogin(event)">
+            <div id="form-error"></div>
+            <br>
+            <input type="text" id="user" placeholder="Matrícula Universitaria">
+            <br><br>
+            <input type="password" id="pass" placeholder="Clave Alfanumérica">
+            <br><br>
+            
+            <div style="display: flex; align-items: center;">
+                <div class="fake-checkbox"></div>
+                <span style="margin-left: 5px; font-size: 10px;">Recordar sesión en este equipo</span>
+            </div>
+            
+            <br><br>
+            <button class="btn" type="submit">Ingresar</button>
+        </form>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
