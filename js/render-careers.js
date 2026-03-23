@@ -1,0 +1,77 @@
+import { loadJson } from "./render-loader.js";
+
+function createParagraph(text, className = "") {
+    const paragraph = document.createElement("p");
+    if (className) {
+        paragraph.className = className;
+    }
+    paragraph.textContent = text;
+    return paragraph;
+}
+
+function renderCareerItem(item) {
+    const article = document.createElement("article");
+    article.id = item.id;
+    article.className = "career-card";
+
+    const title = document.createElement("h3");
+    title.textContent = item.name;
+
+    const meta = createParagraph(`${item.degree} | ${item.duration} | ${item.modality}`, "career-meta");
+    const summary = createParagraph(item.summary);
+    const shifts = createParagraph(`Turnos: ${item.shift.join(", ")}`);
+    const requirements = createParagraph(`Ingreso: ${item.requirements}`);
+    const details = createParagraph(item.details);
+
+    const link = document.createElement("a");
+    link.href = item.url;
+    link.textContent = `Enlace directo a ${item.name}`;
+
+    article.append(title, meta, summary, shifts, requirements, details, link);
+    return article;
+}
+
+function getSelectedShifts(form) {
+    return Array.from(form.querySelectorAll('input[name="shift"]:checked')).map((input) => input.value);
+}
+
+function filterCareers(careers, selectedShifts) {
+    if (selectedShifts.length === 0) {
+        return careers;
+    }
+
+    return careers.filter((career) => selectedShifts.some((shift) => career.shift.includes(shift)));
+}
+
+async function initCareers() {
+    const careersList = document.getElementById("careers-list");
+    const careerFilters = document.getElementById("career-filters");
+    const careersCount = document.getElementById("careers-count");
+
+    if (!careersList || !careerFilters || !careersCount) {
+        throw new Error("Faltan contenedores requeridos para renderizar la pagina de carreras.");
+    }
+
+    const careers = await loadJson("./data/carreras.json");
+
+    function updateCareers() {
+        const selectedShifts = getSelectedShifts(careerFilters);
+        const filteredCareers = filterCareers(careers, selectedShifts);
+
+        careersCount.textContent = `${filteredCareers.length} carrera(s) encontradas.`;
+
+        if (filteredCareers.length === 0) {
+            careersList.replaceChildren(createParagraph("No hay carreras que coincidan con los filtros seleccionados.", "empty-state"));
+            return;
+        }
+
+        careersList.replaceChildren(...filteredCareers.map(renderCareerItem));
+    }
+
+    careerFilters.addEventListener("change", updateCareers);
+    updateCareers();
+}
+
+initCareers().catch((error) => {
+    console.error(error);
+});

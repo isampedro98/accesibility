@@ -1,60 +1,61 @@
 <!doctype html>
 <html lang="es">
-
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Universidad | Carreras</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/navbar.css">
   </head>
-
   <body>
     <div data-include="site-header"></div>
-    <main id="main">
-      <table width="100%" border="0" cellspacing="0" cellpadding="20">
-        <tr>
-          <td width="30%" bgcolor="#e0e0e0" valign="top">
-            <span style="font-weight: bold;">Filtros:</span><br><br>
-            Turno Manana <input type="checkbox"><br>
-            Turno Noche <input type="checkbox">
-          </td>
-          <td width="70%" valign="top">
-            <h2>Oferta Academica</h2>
+    <main id="main" class="page-shell">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="index.html">Inicio</a></li>
+          <li aria-current="page">Carreras</li>
+        </ol>
+      </nav>
 
-            <div class="acordeon-header" onclick="toggleAcordeon('panel1')"
-              style="background:#ccc; padding:10px; cursor:pointer;">
-              Ingenieria en Sistemas <span>+</span>
-            </div>
-            <div id="panel1" style="display:none; padding:10px; border:1px solid #ccc;">
-              Duracion: 5 anos. Requiere curso de ingreso.
-            </div>
+      <section class="page-intro">
+        <h1>Oferta academica</h1>
+        <p>Consulta carreras, modalidad, duracion, requisitos de ingreso y turnos disponibles.</p>
+      </section>
 
-            <div class="acordeon-header" onclick="toggleAcordeon('panel2')"
-              style="background:#ccc; padding:10px; cursor:pointer; margin-top:5px;">
-              Licenciatura en Diseno <span>+</span>
-            </div>
-            <div id="panel2" style="display:none; padding:10px; border:1px solid #ccc;">
-              Duracion: 4 anos. Modalidad hibrida.
-            </div>
-          </td>
-        </tr>
-      </table>
+      <div class="content-grid">
+        <section class="filters-panel">
+          <h2>Filtros de busqueda</h2>
+          <form id="career-filters">
+            <fieldset>
+              <legend>Turno</legend>
+              <label>
+                <input type="checkbox" name="shift" value="manana">
+                Manana
+              </label>
+              <label>
+                <input type="checkbox" name="shift" value="noche">
+                Noche
+              </label>
+            </fieldset>
+          </form>
+        </section>
+
+        <section class="career-results">
+          <h2>Listado de carreras</h2>
+          <p id="careers-count" class="helper-text"></p>
+          <div id="careers-list" class="career-list"></div>
+        </section>
+      </div>
+
+      <aside class="support-panel">
+        <h2>Informacion complementaria</h2>
+        <p>La secretaria academica brinda orientacion sobre inscripcion, documentacion y fechas clave del ciclo lectivo.</p>
+        <p><a href="mapa.html">Ver mapa del sitio y canales de ayuda</a></p>
+      </aside>
     </main>
     <div data-include="site-footer"></div>
 
-    <script>
-      function toggleAcordeon(id) {
-        var x = document.getElementById(id);
-        if (x.style.display === "none") {
-          x.style.display = "block";
-        } else {
-          x.style.display = "none";
-        }
-      }
-    </script>
     <script src="js/load-partials.js"></script>
+    <script type="module" src="js/render-careers.js"></script>
   </body>
-
 </html>

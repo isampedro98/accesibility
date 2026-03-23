@@ -1,18 +1,91 @@
 /* ESTILOS INACCESIBLES */
 * {
-  /* Â¡Grave error! Elimina el indicador visual para navegaciÃ³n por teclado */
+  /* ¡Grave error! Elimina el indicador visual para navegación por teclado */
   outline: none !important; 
 }
 
 body {
-  font-family: "Times New Roman", Times, serif; /* TipografÃ­a poco amigable para dislexia */
-  font-size: 12px; /* Muy pequeÃ±o */
-  color: #999999; /* Contraste bajÃ­simo contra fondo blanco */
+  font-family: "Times New Roman", Times, serif; /* Tipografía poco amigable para dislexia */
+  font-size: 12px; /* Muy pequeño */
+  color: #999999; /* Contraste bajísimo contra fondo blanco */
   background-color: #f4f4f4;
-  line-height: 1.1; /* PÃ¡rrafos apretados, difÃ­cil lectura */
+  line-height: 1.1; /* Párrafos apretados, difícil lectura */
 }
 
-/* Botones genÃ©ricos */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+section,
+aside {
+  margin-bottom: 24px;
+}
+
+.page-shell {
+  padding-top: 20px;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  gap: 8px;
+}
+
+.breadcrumb li + li::before {
+  content: ">";
+  margin-right: 8px;
+  color: inherit;
+}
+
+fieldset {
+  border: 1px solid #bbb;
+  padding: 12px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.filters-panel,
+.support-panel,
+.page-intro,
+.career-card {
+  padding: 16px;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+.career-list {
+  display: grid;
+  gap: 16px;
+}
+
+.helper-text,
+.career-meta,
+.empty-state {
+  margin-bottom: 12px;
+}
+
+/* Botones genéricos */
 .btn {
   background-color: #4CAF50;
   color: #4CAF50; /* Texto del mismo color que el fondo casi */
@@ -56,4 +129,10 @@ input[type="text"], input[type="password"] {
 }
 .fake-checkbox.checked {
   background: blue; /* Solo color, sin tilde visible */
+}
+
+@media (max-width: 768px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
 }

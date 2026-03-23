@@ -1,0 +1,38 @@
+[
+  {
+    "id": "carrera-isi",
+    "name": "Ingenieria en Sistemas",
+    "degree": "Ingenieria",
+    "duration": "5 anos",
+    "modality": "Presencial",
+    "shift": ["manana", "noche"],
+    "summary": "Formacion orientada al desarrollo de software, arquitectura de sistemas y gestion tecnologica.",
+    "requirements": "Curso de ingreso obligatorio",
+    "details": "Incluye practicas de programacion, bases de datos, redes y gestion de proyectos.",
+    "url": "#carrera-isi"
+  },
+  {
+    "id": "carrera-ldg",
+    "name": "Licenciatura en Diseno",
+    "degree": "Licenciatura",
+    "duration": "4 anos",
+    "modality": "Hibrida",
+    "shift": ["noche"],
+    "summary": "Trayecto academico centrado en comunicacion visual, interfaces y produccion multimedia.",
+    "requirements": "Entrevista inicial y documentacion completa",
+    "details": "Combina talleres practicos, teoria del diseno y herramientas digitales aplicadas.",
+    "url": "#carrera-ldg"
+  },
+  {
+    "id": "carrera-cta",
+    "name": "Tecnicatura en Administracion",
+    "degree": "Tecnicatura",
+    "duration": "3 anos",
+    "modality": "Presencial",
+    "shift": ["manana"],
+    "summary": "Propuesta enfocada en gestion administrativa, procesos organizacionales y herramientas de gestion.",
+    "requirements": "Titulo secundario completo",
+    "details": "Aborda administracion, contabilidad basica, recursos humanos y herramientas digitales de oficina.",
+    "url": "#carrera-cta"
+  }
+]
