@@ -1,0 +1,18 @@
+[
+  {
+    "id": "noticia-001",
+    "title": "Actualizacion del sistema de evaluacion",
+    "summary": "Se aplicaran cambios en las evaluaciones del semestre para mejorar la organizacion academica.",
+    "date": "2026-03-15",
+    "category": "Academica",
+    "url": "novedades/evaluacion-2026.html"
+  },
+  {
+    "id": "noticia-002",
+    "title": "Convocatoria a becas de investigacion",
+    "summary": "Se abre una nueva convocatoria para estudiantes avanzados y graduados recientes.",
+    "date": "2026-03-10",
+    "category": "Investigacion",
+    "url": "novedades/becas-investigacion-2026.html"
+  }
+]
