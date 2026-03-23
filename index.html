@@ -1,61 +1,49 @@
 <!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Universidad</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navbar.css">
+  </head>
+  <body>
+    <div data-include="site-header"></div>
+    <main id="main">
+      <section>
+        <h1 id="inicio-bienvenida">Bienvenidos a la universidad</h1>
+        <div>
+          <img
+            src="images/fondo-bienvenida.avif"
+            alt="Bienvenidos a la universidad, inscripciones abiertas"
+          >
+        </div>
+      </section>
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Universidad</title>
-        <link rel="stylesheet" href="css/styles.css">
-        <link rel="stylesheet" href="css/navbar.css">
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
+      <section aria-labelledby="inicio-noticias">
+        <h2 id="inicio-noticias">Noticias institucionales</h2>
+        <div id="news-list" class="cards" aria-live="polite"></div>
+      </section>
 
-    <body>
-        <header>
-            <a href="#main" class="skip">Saltar al contenido principal</a>
-            <nav class="navbar" aria-label="Navegacion principal">
-                <a href="index.html" class="active">Inicio</a>
-                <div class="subnav">
-                    <button class="subnavbtn" type="button">Facultad <i class="fa fa-caret-down"></i></button>
-                    <div class="subnav-content">
-                        <a href="carreras.html">Carreras</a>
-                        <a href="novedades.html">Novedades</a>
-                    </div>
-                </div>
-                <a href="estudiantes.html">Portal Estudiantes</a>
-            </nav>
-        </header>
-        <main id="main">
-            <section>
-                <h1 id="inicio-bienvenida">Bienvenidos a la universidad</h1>
-                <div>
-                    <img src="images/fondo-bienvenida.avif"
-                        alt="Bienvenidos a la universidad, inscripciones abiertas" />
-                </div>
-            </section>
-            <section aria-labelledby="inicio-noticias">
-                <h2 id="inicio-noticias">Noticias institucionales</h2>
-                <div id="news-list" class="cards" aria-live="polite"></div>
-            </section>
-            <section>
-                <h2>Nuestra Misión Institucional</h2>
-                <a href="novedades.html">Haga clic aquí</a> para leer más.
-            </section>
+      <section>
+        <h2>Nuestra Mision Institucional</h2>
+        <a href="novedades.html">Haga clic aqui</a> para leer mas.
+      </section>
 
-            <aside aria-labelledby="inicio-info-secundaria">
-                <h2 id="inicio-info-secundaria">Informacion util</h2>
-                <div id="secondary-info" class="cards" aria-live="polite"></div>
-            </aside>
+      <aside aria-labelledby="inicio-info-secundaria">
+        <h2 id="inicio-info-secundaria">Informacion util</h2>
+        <div id="secondary-info" class="cards" aria-live="polite"></div>
+      </aside>
 
-            <div id="promoModal">
-                <h3>¡Aviso Importante!</h3>
-                <p>El sistema estará en mantenimiento.</p>
-                <div onclick="cerrarModal()" style="cursor:pointer; color:blue;">Cerrar [X]</div>
-            </div>
-        </main>
-        <script src="js/scripts.js"></script>
-        <script type="module" src="js/render-home.js"></script>
-    </body>
+      <div id="promoModal">
+        <h3>Aviso importante</h3>
+        <p>El sistema estara en mantenimiento.</p>
+        <div onclick="cerrarModal()" style="cursor:pointer; color:blue;">Cerrar [X]</div>
+      </div>
+    </main>
 
+    <script src="js/load-partials.js"></script>
+    <script src="js/scripts.js"></script>
+    <script type="module" src="js/render-home.js"></script>
+  </body>
 </html>

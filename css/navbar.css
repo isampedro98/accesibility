@@ -13,6 +13,10 @@
   height: auto;
 }
 
+.site-header {
+  position: relative;
+}
+
 /* The navigation menu */
 .navbar {
   overflow: hidden;
@@ -39,12 +43,12 @@
 .subnav .subnavbtn {
   font-size: 16px;
   border: none;
-  outline: none;
   color: #a0a0a0;
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
+  cursor: pointer;
 }
 
 /* Add a background color to navigation links on hover */
@@ -57,7 +61,7 @@
   display: none;
   position: absolute;
   left: 0;
-  background-color: a0a0a0;
+  background-color: #a0a0a0;
   width: 100%;
   z-index: 1;
 }
@@ -78,4 +82,21 @@
 /* When you move the mouse over the subnav container, open the subnav content */
 .subnav:hover .subnav-content {
   display: block;
+}
+
+.subnav.open .subnav-content {
+  display: block;
+}
+
+.navbar a.active,
+.subnav.has-active .subnavbtn {
+  background-color: #bdbdbd;
+  color: #222;
+}
+
+.navbar a:focus-visible,
+.subnav .subnavbtn:focus-visible,
+.subnav-content a:focus-visible {
+  outline: 3px solid #111;
+  outline-offset: 2px;
 }

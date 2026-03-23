@@ -1,31 +1,36 @@
+<!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mapa del Sitio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navbar.css">
+  </head>
+  <body>
+    <div data-include="site-header"></div>
+    <main id="main">
+      <div style="font-size: 10px; padding: 10px;">
+        Estas en: Universidad > Secciones > Ayuda > Mapa del Sitio
+      </div>
 
-    <head>
-        <title>Mapa del Sitio</title>
-        <link rel="stylesheet" href="css/styles.css">
-    </head>
-
-    <body>
-        <div style="font-size: 10px; padding: 10px;">
-            Estás en: Universidad > Secciones > Ayuda > Mapa del Sitio
+      <div style="padding: 20px;">
+        <h2>Buscador Interno</h2>
+        <div style="display: flex;">
+          <input type="text" placeholder="Termino a buscar..." style="padding: 5px;">
+          <div style="background: #ccc; padding: 5px 10px; cursor: pointer;" onclick="alert('Buscando...')">
+            Buscar
+          </div>
         </div>
 
-        <div style="padding: 20px;">
-            <h2>Buscador Interno</h2>
-            <div style="display: flex;">
-                <input type="text" placeholder="Término a buscar..." style="padding: 5px;">
-                <div style="background: #ccc; padding: 5px 10px; cursor: pointer;" onclick="alert('Buscando...')">
-                    🔍
-                </div>
-            </div>
-
-            <h2 style="margin-top: 30px;">Estructura del sitio</h2>
-            <ul>
-                <li><a href="index.html">🏠</a> (Ir a la portada)</li>
-                <li><a href="estudiantes.html">Portal (Requiere credenciales)</a></li>
-                <li><a href="carreras.html">Nuestras carreras</a></li>
-            </ul>
-        </div>
-    </body>
-
+        <h2 style="margin-top: 30px;">Estructura del sitio</h2>
+        <ul>
+          <li><a href="index.html">Portada</a></li>
+          <li><a href="estudiantes.html">Portal (Requiere credenciales)</a></li>
+          <li><a href="carreras.html">Nuestras carreras</a></li>
+        </ul>
+      </div>
+    </main>
+    <script src="js/load-partials.js"></script>
+  </body>
 </html>

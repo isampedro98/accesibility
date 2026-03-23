@@ -1,38 +1,37 @@
+<!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portal</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navbar.css">
+  </head>
+  <body>
+    <div data-include="site-header"></div>
+    <main id="main">
+      <div style="padding: 30px;">
+        <h3>Ingreso al Sistema Siu-Guarani Universitario v9.8.2</h3>
 
-    <head>
-        <title>Portal</title>
-        <link rel="stylesheet" href="css/styles.css">
-    </head>
+        <form onsubmit="simularLogin(event)">
+          <div id="form-error"></div>
+          <br>
+          <input type="text" id="user" placeholder="Matricula Universitaria">
+          <br><br>
+          <input type="password" id="pass" placeholder="Clave Alfanumerica">
+          <br><br>
 
-    <body>
-        <div class="nav-menu">
-            <ul>
-                <li><a href="index.html">Volver</a></li>
-            </ul>
-        </div>
+          <div style="display: flex; align-items: center;">
+            <div class="fake-checkbox"></div>
+            <span style="margin-left: 5px; font-size: 10px;">Recordar sesion en este equipo</span>
+          </div>
 
-        <div style="padding: 30px;">
-            <h3>Ingreso al Sistema Siu-Guarani Universitario v9.8.2</h3>
-
-            <form onsubmit="simularLogin(event)">
-                <div id="form-error"></div>
-                <br>
-                <input type="text" id="user" placeholder="Matrícula Universitaria">
-                <br><br>
-                <input type="password" id="pass" placeholder="Clave Alfanumérica">
-                <br><br>
-
-                <div style="display: flex; align-items: center;">
-                    <div class="fake-checkbox"></div>
-                    <span style="margin-left: 5px; font-size: 10px;">Recordar sesión en este equipo</span>
-                </div>
-
-                <br><br>
-                <button class="btn" type="submit">Ingresar</button>
-            </form>
-        </div>
-        <script src="js/scripts.js"></script>
-    </body>
-
+          <br><br>
+          <button class="btn" type="submit">Ingresar</button>
+        </form>
+      </div>
+    </main>
+    <script src="js/load-partials.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
