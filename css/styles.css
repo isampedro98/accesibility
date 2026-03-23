@@ -12,25 +12,10 @@ body {
   line-height: 1.1; /* Párrafos apretados, difícil lectura */
 }
 
-main {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 24px 16px;
-}
-
 img,
 video {
   max-width: 100%;
   height: auto;
-}
-
-section,
-aside {
-  margin-bottom: 24px;
-}
-
-.page-shell {
-  padding-top: 20px;
 }
 
 .content-grid {
@@ -55,23 +40,21 @@ aside {
   color: inherit;
 }
 
-fieldset {
+.page-intro,
+.content-grid,
+.support-panel,
+.career-card {
+  margin-bottom: 24px;
+}
+
+#career-filters fieldset {
   border: 1px solid #bbb;
   padding: 12px;
 }
 
-label {
+#career-filters label {
   display: block;
   margin-bottom: 8px;
-}
-
-.filters-panel,
-.support-panel,
-.page-intro,
-.career-card {
-  padding: 16px;
-  border: 1px solid #ccc;
-  background: #fff;
 }
 
 .career-list {
