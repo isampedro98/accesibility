@@ -1,38 +1,38 @@
-[
+﻿[
   {
     "id": "carrera-isi",
-    "name": "Ingenieria en Sistemas",
-    "degree": "Ingenieria",
-    "duration": "5 anos",
+    "name": "Ingeniería en Sistemas",
+    "degree": "Ingeniería",
+    "duration": "5 años",
     "modality": "Presencial",
-    "shift": ["manana", "noche"],
-    "summary": "Formacion orientada al desarrollo de software, arquitectura de sistemas y gestion tecnologica.",
+    "shift": ["mañana", "noche"],
+    "summary": "Formación orientada al desarrollo de software, arquitectura de sistemas y gestión tecnológica.",
     "requirements": "Curso de ingreso obligatorio",
-    "details": "Incluye practicas de programacion, bases de datos, redes y gestion de proyectos.",
+    "details": "Incluye prácticas de programación, bases de datos, redes y gestión de proyectos.",
     "url": "#carrera-isi"
   },
   {
     "id": "carrera-ldg",
-    "name": "Licenciatura en Diseno",
+    "name": "Licenciatura en Diseño",
     "degree": "Licenciatura",
-    "duration": "4 anos",
-    "modality": "Hibrida",
+    "duration": "4 años",
+    "modality": "Híbrida",
     "shift": ["noche"],
-    "summary": "Trayecto academico centrado en comunicacion visual, interfaces y produccion multimedia.",
-    "requirements": "Entrevista inicial y documentacion completa",
-    "details": "Combina talleres practicos, teoria del diseno y herramientas digitales aplicadas.",
+    "summary": "Trayecto académico centrado en comunicación visual, interfaces y producción multimedia.",
+    "requirements": "Entrevista inicial y documentación completa",
+    "details": "Combina talleres prácticos, teoría del diseño y herramientas digitales aplicadas.",
     "url": "#carrera-ldg"
   },
   {
     "id": "carrera-cta",
-    "name": "Tecnicatura en Administracion",
+    "name": "Tecnicatura en Administración",
     "degree": "Tecnicatura",
-    "duration": "3 anos",
+    "duration": "3 años",
     "modality": "Presencial",
-    "shift": ["manana"],
-    "summary": "Propuesta enfocada en gestion administrativa, procesos organizacionales y herramientas de gestion.",
-    "requirements": "Titulo secundario completo",
-    "details": "Aborda administracion, contabilidad basica, recursos humanos y herramientas digitales de oficina.",
+    "shift": ["mañana"],
+    "summary": "Propuesta enfocada en gestión administrativa, procesos organizacionales y herramientas de gestión.",
+    "requirements": "Título secundario completo",
+    "details": "Aborda administración, contabilidad básica, recursos humanos y herramientas digitales de oficina.",
     "url": "#carrera-cta"
   }
 ]

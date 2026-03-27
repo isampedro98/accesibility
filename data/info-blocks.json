@@ -1,15 +1,15 @@
-[
+﻿[
   {
     "id": "info-001",
-    "title": "Calendario academico",
-    "text": "Consulta fechas de inscripcion, cursada y examenes del ciclo lectivo.",
+    "title": "Calendario académico",
+    "text": "Consulta fechas de inscripción, cursada y exámenes del ciclo lectivo.",
     "url": "mapa.html",
-    "linkLabel": "Consultar informacion del sitio"
+    "linkLabel": "Consultar información del sitio"
   },
   {
     "id": "info-002",
     "title": "Portal de estudiantes",
-    "text": "Accede a tramites, consultas y servicios de autogestion estudiantil.",
+    "text": "Accedé a trámites, consultas y servicios de autogestión estudiantil.",
     "url": "estudiantes.html",
     "linkLabel": "Ir al portal de estudiantes"
   }
