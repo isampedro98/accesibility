@@ -8,115 +8,149 @@
 }
 
 .skip:focus {
-  position: static;
+  position: absolute;
+  left: 12px;
+  top: 12px;
   width: auto;
   height: auto;
   padding: 8px 12px;
   background-color: var(--color-bg-surface);
   color: var(--color-text-strong);
+  outline: 3px solid var(--color-focus-ring);
+  outline-offset: 2px;
+  z-index: 20;
 }
 
 .site-header {
   position: relative;
 }
 
-/* The navigation menu */
 .navbar {
-  overflow: hidden;
-  background-color: #e0e0e0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 0;
+  background-color: var(--color-bg-nav);
+  border-bottom: 1px solid var(--color-border-subtle);
 }
 
-/* Navigation links */
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: #a0a0a0;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* The subnavigation menu */
-.subnav {
-  float: left;
-  overflow: hidden;
-}
-
-/* Subnav button */
+.navbar > a,
 .subnav .subnavbtn {
-  font-size: 16px;
-  border: none;
-  color: #a0a0a0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
   padding: 14px 16px;
-  background-color: inherit;
+  border: 0;
+  background-color: transparent;
+  color: var(--color-text-default);
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
   font-family: inherit;
-  margin: 0;
   cursor: pointer;
 }
 
-/* Add a background color to navigation links on hover */
-.navbar a:hover, .subnav:hover .subnavbtn {
-  background-color: #a0a0a0;
+.navbar > a:hover,
+.navbar > a:focus-visible,
+.subnav:hover .subnavbtn,
+.subnav .subnavbtn:focus-visible {
+  background-color: var(--color-bg-subnav-hover);
+  color: var(--color-text-strong);
 }
 
-/* Style the subnav content - positioned absolute */
+.subnav {
+  position: relative;
+}
+
 .subnav-content {
   display: none;
   position: absolute;
+  top: 100%;
   left: 0;
-  background-color: #a0a0a0;
-  width: 100%;
-  z-index: 1;
+  min-width: 220px;
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border-subtle);
+  box-shadow: var(--shadow-soft);
+  z-index: 10;
 }
 
-/* Style the subnav links */
 .subnav-content a {
-  float: left;
-  color: #aaa;
+  display: block;
+  padding: 12px 16px;
+  color: var(--color-text-default);
   text-decoration: none;
 }
 
-/* Add a grey background color on hover */
-.subnav-content a:hover {
-  background-color: #eee;
-  color: black;
+.subnav-content a:hover,
+.subnav-content a:focus-visible {
+  background-color: var(--color-bg-subnav-hover);
+  color: var(--color-text-strong);
 }
 
-/* When you move the mouse over the subnav container, open the subnav content */
-.subnav:hover .subnav-content {
-  display: block;
-}
-
+.subnav:hover .subnav-content,
 .subnav.open .subnav-content {
   display: block;
 }
 
 .navbar a.active,
 .subnav.has-active .subnavbtn {
-  background-color: #bdbdbd;
-  color: #222;
+  background-color: var(--color-bg-nav-active);
+  color: var(--color-text-strong);
+}
+
+.navbar-controls {
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+}
+
+.navbar-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-text-default);
+  font-size: 14px;
+}
+
+.navbar-control span {
+  font-weight: 700;
+}
+
+.navbar-control select {
+  min-height: 38px;
+  padding: 6px 10px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 4px;
+  background-color: var(--color-bg-surface);
+  color: var(--color-text-default);
+  font: inherit;
 }
 
 .navbar a:focus-visible,
 .subnav .subnavbtn:focus-visible,
 .subnav-content a:focus-visible,
+.navbar-control select:focus-visible,
 .footer-nav a:focus-visible,
 .site-footer-contact a:focus-visible {
-  outline: 3px solid #111;
+  outline: 3px solid var(--color-focus-ring);
   outline-offset: 2px;
 }
 
 .site-footer {
   margin-top: 32px;
   padding: 20px 16px;
-  background-color: #e0e0e0;
-  border-top: 1px solid #c8c8c8;
+  background-color: var(--color-bg-nav);
+  border-top: 1px solid var(--color-border-subtle);
 }
 
 .site-footer-title {
   margin: 0 0 10px;
-  font-weight: bold;
-  color: #222;
+  font-weight: 700;
+  color: var(--color-text-strong);
 }
 
 .footer-nav {
@@ -129,9 +163,59 @@
 .footer-nav a,
 .site-footer-contact,
 .site-footer-contact a {
-  color: #222;
+  color: var(--color-text-default);
 }
 
 .site-footer-contact {
   margin: 0;
 }
+
+@media (max-width: 960px) {
+  .navbar {
+    align-items: flex-start;
+  }
+
+  .navbar-controls {
+    width: 100%;
+    margin-left: 0;
+    padding-top: 0;
+    border-top: 1px solid var(--color-border-subtle);
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar > a,
+  .subnav,
+  .subnav .subnavbtn {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .subnav-content {
+    position: static;
+    min-width: 100%;
+    box-shadow: none;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .navbar-controls,
+  .navbar-control {
+    width: 100%;
+  }
+
+  .navbar-control {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .navbar-control select {
+    width: 100%;
+  }
+}
+
+.subnav-caret {
+  margin-left: 6px;
+  font-size: 0.85em;
+}
+

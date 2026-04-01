@@ -4,7 +4,7 @@
     <a href="index.html" data-nav-link="index.html">Inicio</a>
     <div class="subnav">
       <button class="subnavbtn" type="button" aria-expanded="false" aria-controls="faculty-subnav">
-        Facultad <i class="fa fa-caret-down" aria-hidden="true" role="img" aria-label="Desplegar submenu"></i>
+        Facultad <span class="subnav-caret" aria-hidden="true">?</span>
       </button>
       <div class="subnav-content" id="faculty-subnav">
         <a href="carreras.html" data-nav-link="carreras.html">Carreras</a>
@@ -13,5 +13,24 @@
     </div>
     <a href="estudiantes.html" data-nav-link="estudiantes.html">Portal Estudiantes</a>
     <a href="mapa.html" data-nav-link="mapa.html">Mapa del sitio</a>
+
+    <div class="navbar-controls" aria-label="Preferencias de visualizacion">
+      <label class="navbar-control" for="color-theme-select">
+        <span>Colores</span>
+        <select id="color-theme-select" name="color-theme">
+          <option value="contrastes">Contrastes</option>
+          <option value="siu-guarani">SIU Guarani</option>
+        </select>
+      </label>
+
+      <label class="navbar-control" for="font-theme-select">
+        <span>Tipografia</span>
+        <select id="font-theme-select" name="font-theme">
+          <option value="open-dyslexic">OpenDyslexic</option>
+          <option value="helvetica">Helvetica</option>
+        </select>
+      </label>
+    </div>
   </nav>
 </header>
+
