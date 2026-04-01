@@ -8,8 +8,8 @@ body {
 }
 
 main {
-  max-width: 1100px;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
   padding: 24px 20px 40px;
 }
 
@@ -87,6 +87,31 @@ video {
 .support-panel,
 .career-card {
   margin-bottom: 24px;
+}
+
+.home-hero,
+.home-section {
+  text-align: left;
+}
+
+.home-hero > :not(.home-hero__media),
+.home-section > :not(.cards) {
+  max-width: 72ch;
+}
+
+.home-hero__media {
+  max-width: 740px;
+}
+
+.home-hero__media img {
+  display: block;
+  width: 100%;
+}
+
+.home-section .cards,
+.home-section .card,
+.home-section .info-block {
+  text-align: left;
 }
 
 fieldset {
@@ -172,19 +197,39 @@ textarea {
   cursor: pointer;
 }
 
-/* Modal inaccesible */
-#promoModal {
+body.modal-open {
+  overflow: hidden;
+}
+
+.promo-modal[hidden] {
   display: none;
+}
+
+.promo-modal {
   position: fixed;
-  top: 30%;
-  left: 30%;
-  width: 400px;
-  background: var(--color-bg-surface);
-  border: 1px solid var(--color-border-subtle);
-  padding: 20px;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background-color: rgba(15, 23, 42, 0.52);
   z-index: 1000;
+}
+
+.promo-modal__dialog {
+  width: min(420px, 100%);
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: 8px;
+  padding: 24px;
   box-shadow: var(--shadow-soft);
-  /* Pendiente de una fase posterior: backdrop, foco y cierre por teclado. */
+}
+
+.promo-modal__dialog > :first-child {
+  margin-top: 0;
+}
+
+.promo-modal__dialog > :last-child {
+  margin-bottom: 0;
 }
 
 /* Formularios con problemas visuales que se corrigen en fases posteriores */

@@ -14,35 +14,39 @@
   <body>
     <div data-include="site-header"></div>
     <main id="main">
-      <section>
+      <section class="home-hero" aria-labelledby="inicio-bienvenida">
         <h1 id="inicio-bienvenida">Bienvenidos a la universidad</h1>
-        <div>
+        <div class="home-hero__media">
           <img src="images/fondo-bienvenida.avif" alt="Bienvenidos a la universidad, inscripciones abiertas">
         </div>
       </section>
 
-      <section aria-labelledby="inicio-noticias">
+      <section class="home-section" aria-labelledby="inicio-noticias">
         <h2 id="inicio-noticias">Noticias institucionales</h2>
         <div id="news-list" class="cards" aria-live="polite"></div>
         <p><a href="novedades.html">Ver todas las novedades institucionales</a></p>
       </section>
 
-      <section aria-labelledby="inicio-mision">
+      <section class="home-section" aria-labelledby="inicio-mision">
         <h2 id="inicio-mision">Nuestra Misión Institucional</h2>
         <p><a href="novedades.html">Leer más sobre la misión institucional</a></p>
       </section>
 
-      <aside aria-labelledby="inicio-info-secundaria">
+      <aside class="home-section" aria-labelledby="inicio-info-secundaria">
         <h2 id="inicio-info-secundaria">Información útil</h2>
         <div id="secondary-info" class="cards" aria-live="polite"></div>
       </aside>
-
-      <section id="promoModal" aria-labelledby="promo-modal-titulo">
-        <h3 id="promo-modal-titulo">Aviso importante</h3>
-        <p>El sistema estará en mantenimiento.</p>
-        <button type="button" onclick="cerrarModal()">Cerrar aviso</button>
-      </section>
     </main>
+
+    <section id="promoModal" class="promo-modal" role="alertdialog" aria-modal="true"
+      aria-labelledby="promo-modal-titulo" aria-describedby="promo-modal-descripcion" tabindex="-1" hidden>
+      <div class="promo-modal__dialog">
+        <h2 id="promo-modal-titulo">Aviso importante</h2>
+        <p id="promo-modal-descripcion">El sistema estará en mantenimiento.</p>
+        <button id="promo-modal-close" class="btn" type="button">Cerrar aviso</button>
+      </div>
+    </section>
+
     <div data-include="site-footer"></div>
 
     <script src="js/load-partials.js"></script>
