@@ -1,0 +1,107 @@
+:root,
+html[data-color-theme="contrastes"] {
+  --font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-family-heading: var(--font-family-base);
+  --font-size-base: 16px;
+  --line-height-base: 1.5;
+  --letter-spacing-base: 0.01em;
+  --color-brand-strong: #2546F0;
+  --color-brand-highlight: #5928ED;
+  --color-brand-focus: #2546F0;
+  --color-text-on-brand: #FFFFFF;
+  --color-text-strong: #000000;
+  --color-text-default: #000000;
+  --color-text-muted: #111827;
+  --color-bg-page: #F6FAFF;
+  --color-bg-surface: #FFFFFF;
+  --color-bg-soft: #E8F6FF;
+  --color-bg-nav: #E6F9F4;
+  --color-bg-nav-active: #DCE6FF;
+  --color-bg-subnav-hover: #E8F6FF;
+  --color-border-subtle: #B8D6F4;
+  --color-border-strong: #7FB6F0;
+  --color-accent-warm: #00B4C5;
+  --color-accent-warm-soft: #E3FBFE;
+  --color-success: #00BF7D;
+  --color-error: #B91C1C;
+  --color-focus-ring: #2546F0;
+  --shadow-soft: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+html[data-color-theme="siu-guarani"] {
+  --font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-family-heading: var(--font-family-base);
+  --font-size-base: 16px;
+  --line-height-base: 1.5;
+  --letter-spacing-base: 0.01em;
+  --color-brand-strong: #005A8D;
+  --color-brand-highlight: #1D4ED8;
+  --color-brand-focus: #0B5FFF;
+  --color-text-on-brand: #FFFFFF;
+  --color-text-strong: #0F172A;
+  --color-text-default: #1F2937;
+  --color-text-muted: #475569;
+  --color-bg-page: #F8FAFC;
+  --color-bg-surface: #FFFFFF;
+  --color-bg-soft: #EAF4FF;
+  --color-bg-nav: #EAF4FF;
+  --color-bg-nav-active: #D7EAFF;
+  --color-bg-subnav-hover: #F8FAFC;
+  --color-border-subtle: #C7D7E5;
+  --color-border-strong: #94A3B8;
+  --color-accent-warm: #8A5A00;
+  --color-accent-warm-soft: #FFF4D6;
+  --color-success: #0F766E;
+  --color-error: #B91C1C;
+  --color-focus-ring: #0B5FFF;
+  --shadow-soft: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+  background-color: var(--color-bg-page);
+  color: var(--color-text-default);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+  font-family: var(--font-family-heading);
+  color: var(--color-text-strong);
+}
+
+a {
+  color: var(--color-brand-strong);
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--color-brand-highlight);
+}
+
+::selection {
+  background-color: var(--color-brand-highlight);
+  color: var(--color-text-on-brand);
+}
+
+.theme-surface {
+  background-color: var(--color-bg-surface);
+  color: var(--color-text-default);
+}
+
+.theme-surface-soft {
+  background-color: var(--color-bg-soft);
+  color: var(--color-text-default);
+}
+
+.theme-accent-warm {
+  color: var(--color-accent-warm);
+}

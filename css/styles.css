@@ -1,15 +1,10 @@
-/* ESTILOS INACCESIBLES */
-* {
-  /* Grave error. Elimina el indicador visual para navegacion por teclado. */
-  outline: none !important;
-}
-
 body {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 12px;
-  color: #999999;
-  background-color: #f4f4f4;
-  line-height: 1.1;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  color: var(--color-text-default);
+  background-color: var(--color-bg-page);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
 }
 
 img,
@@ -52,7 +47,7 @@ fieldset {
 }
 
 #career-filters fieldset {
-  border: 1px solid #bbb;
+  border: 1px solid var(--color-border-strong);
   padding: 12px;
 }
 
@@ -91,7 +86,7 @@ label {
 
 .news-article {
   padding-bottom: 20px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--color-border-subtle);
 }
 
 .news-article:last-child {
@@ -114,15 +109,18 @@ label {
   overflow: hidden;
 }
 
-button {
+button,
+input,
+select,
+textarea {
   font: inherit;
 }
 
 /* Botones genericos */
 .btn {
-  background-color: #4CAF50;
-  color: #4CAF50;
-  border: none;
+  background-color: var(--color-brand-strong);
+  color: var(--color-text-on-brand);
+  border: 1px solid var(--color-brand-strong);
   padding: 5px 10px;
   cursor: pointer;
 }
@@ -134,10 +132,11 @@ button {
   top: 30%;
   left: 30%;
   width: 400px;
-  background: white;
-  border: 1px solid #ccc;
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-subtle);
   padding: 20px;
   z-index: 1000;
+  box-shadow: var(--shadow-soft);
   /* Pendiente de una fase posterior: backdrop, foco y cierre por teclado. */
 }
 
@@ -145,13 +144,14 @@ button {
 input[type="text"],
 input[type="password"],
 input[type="search"] {
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-border-subtle);
+  background-color: var(--color-bg-surface);
   padding: 5px;
-  color: #ccc;
+  color: var(--color-text-default);
 }
 
 .error-text {
-  color: red;
+  color: var(--color-error);
 }
 
 @media (max-width: 768px) {

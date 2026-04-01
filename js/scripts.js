@@ -33,6 +33,6 @@ function simularLogin(event) {
     }
 
     if (userField) {
-        userField.style.borderColor = 'red';
+        userField.style.borderColor = 'var(--color-error)';
     }
 }
